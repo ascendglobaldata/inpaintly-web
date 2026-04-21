@@ -4,9 +4,8 @@ export const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN!,
 });
 
-// Launch model: SDXL Inpainting — $0.003/gen, safety filter built-in
-export const MODEL =
-  "lucataco/sdxl-inpainting:a5b13068cc81a89a4fbeefeccc774869fcb34df4dbc92c1555e0f2771d49dde7";
+// Launch model: FLUX Fill Pro — handles RGBA masks cleanly, avoids SDXL tensor dim bug
+export const MODEL = "black-forest-labs/flux-fill-pro";
 
 export async function runInpaint(input: {
   imageUrl: string;
@@ -14,15 +13,15 @@ export async function runInpaint(input: {
   prompt: string;
   negativePrompt: string;
 }): Promise<string> {
-  const output = (await replicate.run(MODEL as `${string}/${string}:${string}`, {
+  const output = (await replicate.run(MODEL as `${string}/${string}`, {
     input: {
       image: input.imageUrl,
       mask: input.maskUrl,
       prompt: input.prompt,
-      negative_prompt: input.negativePrompt,
-      num_inference_steps: 30,
-      guidance_scale: 7.5,
-      strength: 0.95,
+      steps: 50,
+      guidance: 60,
+      output_format: "jpg",
+      safety_tolerance: 2,
     },
   })) as unknown;
 
