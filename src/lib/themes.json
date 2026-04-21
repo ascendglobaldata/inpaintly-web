@@ -10,29 +10,33 @@
           "id": "fno-1",
           "label": "Classic Midi",
           "prompt": "A classic black cocktail midi dress, clean tailored silhouette, matte crepe fabric falling just below the knee, bateau neckline, sleeveless, sophisticated natural fabric drape, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric texture, clean minimalist aesthetic",
-          "sample_prompt": "A classic black cocktail midi dress with clean silhouette and matte crepe fabric at knee length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "sample_prompt": "Close-up fashion editorial photograph of a bare shoulder and collarbone of a woman, with the bateau neckline of a matte black crepe cocktail midi dress resting gently against the skin, fine fabric weave visible, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/friday-night-out/fno-1.jpg"
         },
         {
           "id": "fno-2",
           "label": "LBD Cocktail",
           "prompt": "A form-fitting little black cocktail dress, classic hourglass silhouette, smooth satin finish with subtle sheen, thin spaghetti straps, V-neckline, above-the-knee hem, clean feminine tailoring, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric sheen, clean minimalist aesthetic",
-          "sample_prompt": "A form-fitting little black cocktail dress with classic hourglass silhouette and smooth satin finish, thin straps, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "sample_prompt": "Close-up fashion editorial photograph of a décolletage and collarbone of a woman, with the V-neckline of a smooth black satin cocktail dress, a thin spaghetti strap resting across the shoulder, subtle satin sheen catching light, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/friday-night-out/fno-2.jpg"
         },
         {
           "id": "fno-3",
           "label": "Sequin Mini",
           "prompt": "A silver sequin mini dress, densely packed all-over sequins catching light across every inch of fabric, thin spaghetti straps, V-neckline, fitted bodice, mini length just above the knee, smooth liquid drape, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail sequin texture, clean minimalist aesthetic",
-          "sample_prompt": "An elegant silver sequin mini dress with thin straps, sparkling light-catching fabric, smooth draping, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "sample_prompt": "Close-up fashion editorial photograph of a bare lower thigh and knee of a woman standing, with the sparkling hem of a silver sequin mini dress ending mid-thigh, densely packed sequins catching light along the cut hem, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/friday-night-out/fno-3.jpg"
         },
         {
           "id": "fno-4",
           "label": "Cutout Bodycon",
           "prompt": "A black bodycon mini dress with strategic geometric cutouts at the waist exposing narrow slivers of skin, form-fitting stretch crepe fabric, long sleeves, high neckline, precise clean cutout edges, mini length, sculpted silhouette, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric, clean minimalist aesthetic",
-          "sample_prompt": "A bold black bodycon mini dress with strategic geometric waist cutouts, form-fitting stretch fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "sample_prompt": "Close-up fashion editorial photograph of a lower back and natural waist of a woman seen from behind, with a black bodycon mini dress hugging the body and a strategic geometric cutout at the side waist exposing a narrow sliver of skin, smooth stretch crepe fabric, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/friday-night-out/fno-4.jpg"
         }
       ]
     },

@@ -22,6 +22,42 @@ const args = process.argv.slice(2);
 const slug = args.find((a) => !a.startsWith("--"));
 const sizeArg = args.indexOf("--size");
 const SIZE = sizeArg >= 0 ? Number(args[sizeArg + 1]) : 512;
+const modelArg = args.indexOf("--model");
+const MODEL = modelArg >= 0 ? args[modelArg + 1] : "flux-schnell";
+
+const MODELS = {
+  "flux-schnell": {
+    endpoint:
+      "https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
+    buildInput: (prompt) => ({
+      prompt,
+      num_outputs: 1,
+      aspect_ratio: "1:1",
+      output_format: "jpg",
+      output_quality: 80,
+      num_inference_steps: 4,
+      megapixels: SIZE >= 1024 ? "1" : "0.25",
+      disable_safety_checker: false,
+    }),
+  },
+  "flux-1.1-pro": {
+    endpoint:
+      "https://api.replicate.com/v1/models/black-forest-labs/flux-1.1-pro/predictions",
+    buildInput: (prompt) => ({
+      prompt,
+      aspect_ratio: "1:1",
+      output_format: "jpg",
+      output_quality: 90,
+      safety_tolerance: 6,
+      prompt_upsampling: false,
+    }),
+  },
+};
+
+if (!MODELS[MODEL]) {
+  console.error(`Unknown model: ${MODEL}. Options: ${Object.keys(MODELS).join(", ")}`);
+  process.exit(1);
+}
 
 if (!slug) {
   console.error("Usage: node scripts/generate-samples.mjs <slug> [--size 512]");
@@ -48,35 +84,20 @@ const outDir = path.join(ROOT, "public/samples", slug);
 await fs.mkdir(outDir, { recursive: true });
 
 console.log(
-  `Generating ${week.prompts.length} samples for "${week.display_name}" @ ${SIZE}px (flux-schnell)`,
+  `Generating ${week.prompts.length} samples for "${week.display_name}" @ ${SIZE}px (${MODEL})`,
 );
 
 async function runPrediction(prompt) {
-  // Use the sync endpoint so we don't have to poll. flux-schnell is fast
-  // enough (~2s) that a blocking call is reliable.
-  const r = await fetch(
-    "https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        Prefer: "wait=60",
-      },
-      body: JSON.stringify({
-        input: {
-          prompt,
-          num_outputs: 1,
-          aspect_ratio: "1:1",
-          output_format: "jpg",
-          output_quality: 80,
-          num_inference_steps: 4,
-          megapixels: SIZE >= 1024 ? "1" : "0.25",
-          disable_safety_checker: false,
-        },
-      }),
+  const { endpoint, buildInput } = MODELS[MODEL];
+  const r = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      Prefer: "wait=60",
     },
-  );
+    body: JSON.stringify({ input: buildInput(prompt) }),
+  });
   if (!r.ok) {
     const text = await r.text();
     throw new Error(`Replicate ${r.status}: ${text}`);
