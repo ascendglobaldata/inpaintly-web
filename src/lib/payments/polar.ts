@@ -76,14 +76,13 @@ export function verifyWebhook(args: {
   const rawSecret = process.env.POLAR_WEBHOOK_SECRET;
   if (!rawSecret) return { ok: false };
 
-  // Accept "whsec_<base64>" or a bare base64 string.
-  const b64 = rawSecret.startsWith("whsec_") ? rawSecret.slice(6) : rawSecret;
-  let secret: Buffer;
-  try {
-    secret = Buffer.from(b64, "base64");
-  } catch {
-    return { ok: false };
-  }
+  // Standard Webhooks spec:
+  //   - "whsec_<base64>" → strip prefix, base64-decode the rest
+  //   - anything else (incl. Polar's "polar_whs_...") → use raw UTF-8 bytes
+  //     as the HMAC key, matching the standardwebhooks library behavior.
+  const secret: Buffer = rawSecret.startsWith("whsec_")
+    ? Buffer.from(rawSecret.slice(6), "base64")
+    : Buffer.from(rawSecret, "utf8");
 
   const parts = args.signature.split("|");
   if (parts.length !== 3) return { ok: false };
