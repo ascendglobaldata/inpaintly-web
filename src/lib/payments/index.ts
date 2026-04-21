@@ -8,6 +8,7 @@
 import type { PackKey } from "@/lib/utils";
 import * as ls from "./lemonsqueezy";
 import * as paddle from "./paddle";
+import * as polar from "./polar";
 
 export interface PaymentProvider {
   createCheckoutUrl: (args: {
@@ -25,6 +26,6 @@ export interface PaymentProvider {
 const chosen = (process.env.PAYMENT_PROVIDER ?? "lemonsqueezy").toLowerCase();
 
 export const payments: PaymentProvider =
-  chosen === "paddle" ? paddle : ls;
+  chosen === "paddle" ? paddle : chosen === "polar" ? polar : ls;
 
 export const PROVIDER_NAME = chosen;
