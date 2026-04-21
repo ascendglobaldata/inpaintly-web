@@ -20,6 +20,7 @@ export interface ThemeWeek {
 
 interface ThemesFile {
   active_week?: string; // optional manual override for testing
+  previous_week?: string; // optional manual override for the "last week" slot
   weeks: ThemeWeek[];
 }
 
@@ -61,6 +62,32 @@ export function getActiveWeek(now: Date = new Date()): ThemeWeek {
   const offset = weeksSinceReferenceMonday(now);
   // Handle negative (before reference) and large positive uniformly
   const index = ((offset % sorted.length) + sorted.length) % sorted.length;
+  return sorted[index];
+}
+
+/**
+ * Returns the week shown in the "last week" slot below the current drop.
+ * Normally that's one cycle index back. When `previous_week` is set in
+ * themes.json it overrides the computation — useful until we have enough
+ * rendered samples to let the rolling index pick naturally.
+ */
+export function getPreviousWeek(now: Date = new Date()): ThemeWeek {
+  const sorted = [...themes.weeks].sort((a, b) =>
+    a.week_of < b.week_of ? -1 : 1,
+  );
+  if (sorted.length === 0) {
+    throw new Error("No themes defined in themes.json");
+  }
+
+  if (themes.previous_week) {
+    const override = sorted.find((w) => w.week_of === themes.previous_week);
+    if (override) return override;
+  }
+
+  const offset = weeksSinceReferenceMonday(now);
+  // One step back; wrap around with positive modulo
+  const index =
+    (((offset - 1) % sorted.length) + sorted.length) % sorted.length;
   return sorted[index];
 }
 

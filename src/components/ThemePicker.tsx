@@ -1,7 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { getActiveWeek, type ThemeWeek, type ThemePrompt } from "@/lib/activeWeek";
+import {
+  getActiveWeek,
+  getPreviousWeek,
+  type ThemeWeek,
+  type ThemePrompt,
+} from "@/lib/activeWeek";
 import { Button } from "./Button";
 
 interface Props {
@@ -13,22 +18,30 @@ interface Props {
 }
 
 /**
- * Streamlined theme picker — the weekly drop IS the value prop.
- * Shows only the active week's 4 prompts in large tiles. Other weeks
- * and custom prompt are secondary actions (custom prompt routes to a
- * dedicated screen). The active week auto-rolls at Monday 08:00 PT.
+ * Bi-weekly picker. Two sections visible:
+ *   - Top: this week's drop (tagged "THIS WEEK")
+ *   - Bottom: last week's drop (tagged "LAST WEEK")
+ * Each section shows 4 tiles (one per prompt). User picks one tile from
+ * either section then hits Generate. Custom prompt is still available
+ * via a secondary link at the bottom.
  */
 export function ThemePicker({ onPick, onUseCustom, onBack, credits, freeLeft }: Props) {
-  const active: ThemeWeek = useMemo(() => getActiveWeek(), []);
-  const [selected, setSelected] = useState<ThemePrompt | null>(null);
+  const current: ThemeWeek = useMemo(() => getActiveWeek(), []);
+  const previous: ThemeWeek = useMemo(() => getPreviousWeek(), []);
+  const showPrevious = previous.slug !== current.slug;
+
+  const [selected, setSelected] = useState<{
+    week: ThemeWeek;
+    prompt: ThemePrompt;
+  } | null>(null);
 
   const hasCredits = credits > 0 || freeLeft > 0;
 
   function go() {
     if (!selected) return;
-    onPick(selected.prompt, selected.negative_prompt, {
-      theme: active.slug,
-      label: selected.label,
+    onPick(selected.prompt.prompt, selected.prompt.negative_prompt, {
+      theme: selected.week.slug,
+      label: selected.prompt.label,
     });
   }
 
@@ -49,61 +62,28 @@ export function ThemePicker({ onPick, onUseCustom, onBack, credits, freeLeft }: 
       </header>
 
       <div className="flex-1 min-h-0 overflow-y-auto">
-        <div className="px-4 pt-4 pb-2 max-w-lg mx-auto w-full">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex h-2 w-2 rounded-full bg-brand-gradient animate-pulse" />
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
-              This week's drop
-            </p>
-          </div>
-          <h2 className="text-xl font-extrabold leading-tight">
-            {active.display_name}
-          </h2>
-          <p className="text-xs text-slate-600 mt-1">{active.description}</p>
-        </div>
+        <WeekSection
+          week={current}
+          tagLabel="THIS WEEK"
+          tagVariant="current"
+          selectedId={selected?.prompt.id ?? null}
+          onSelect={(prompt) => setSelected({ week: current, prompt })}
+        />
 
-        <div className="px-4 pb-4 max-w-lg mx-auto w-full">
-          <div className="grid grid-cols-2 gap-3">
-            {active.prompts.slice(0, 4).map((p) => {
-              const isSelected = selected?.id === p.id;
-              return (
-                <button
-                  key={p.id}
-                  onClick={() => setSelected(p)}
-                  className={`relative aspect-[3/4] rounded-2xl border-2 overflow-hidden text-left transition ${
-                    isSelected
-                      ? "border-brand-500 ring-2 ring-brand-500/40 shadow-lg"
-                      : "border-slate-200 hover:border-slate-300"
-                  }`}
-                >
-                  {p.sample ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={p.sample}
-                      alt={p.label}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200" />
-                  )}
-                  <div className="absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-black/70 to-transparent">
-                    <p className="text-sm font-semibold text-white drop-shadow">
-                      {p.label}
-                    </p>
-                  </div>
-                  {isSelected ? (
-                    <div className="absolute top-2 right-2 h-6 w-6 rounded-full bg-brand-500 text-white text-xs flex items-center justify-center shadow">
-                      ✓
-                    </div>
-                  ) : null}
-                </button>
-              );
-            })}
-          </div>
+        {showPrevious ? (
+          <WeekSection
+            week={previous}
+            tagLabel="LAST WEEK"
+            tagVariant="previous"
+            selectedId={selected?.prompt.id ?? null}
+            onSelect={(prompt) => setSelected({ week: previous, prompt })}
+          />
+        ) : null}
 
+        <div className="px-4 pb-6 max-w-lg mx-auto w-full">
           <button
             onClick={onUseCustom}
-            className="mt-4 w-full text-sm font-medium text-slate-600 hover:text-slate-900 py-2 underline underline-offset-4"
+            className="w-full text-sm font-medium text-slate-600 hover:text-slate-900 py-2 underline underline-offset-4"
           >
             Or use a custom prompt →
           </button>
@@ -131,5 +111,78 @@ export function ThemePicker({ onPick, onUseCustom, onBack, credits, freeLeft }: 
         )}
       </footer>
     </main>
+  );
+}
+
+function WeekSection({
+  week,
+  tagLabel,
+  tagVariant,
+  selectedId,
+  onSelect,
+}: {
+  week: ThemeWeek;
+  tagLabel: string;
+  tagVariant: "current" | "previous";
+  selectedId: string | null;
+  onSelect: (prompt: ThemePrompt) => void;
+}) {
+  return (
+    <section className="px-4 pt-4 pb-3 max-w-lg mx-auto w-full">
+      <div className="flex items-center gap-2 mb-1">
+        <span
+          className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${
+            tagVariant === "current"
+              ? "bg-brand-gradient text-white"
+              : "bg-slate-100 text-slate-600"
+          }`}
+        >
+          {tagVariant === "current" ? (
+            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+          ) : null}
+          {tagLabel}
+        </span>
+      </div>
+      <h2 className="text-xl font-extrabold leading-tight">{week.display_name}</h2>
+      <p className="text-xs text-slate-600 mt-1 mb-3">{week.description}</p>
+
+      <div className="grid grid-cols-2 gap-3">
+        {week.prompts.slice(0, 4).map((p) => {
+          const isSelected = selectedId === p.id;
+          return (
+            <button
+              key={p.id}
+              onClick={() => onSelect(p)}
+              className={`relative aspect-[3/4] rounded-2xl border-2 overflow-hidden text-left transition ${
+                isSelected
+                  ? "border-brand-500 ring-2 ring-brand-500/40 shadow-lg"
+                  : "border-slate-200 hover:border-slate-300"
+              }`}
+            >
+              {p.sample ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={p.sample}
+                  alt={p.label}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200" />
+              )}
+              <div className="absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-black/70 to-transparent">
+                <p className="text-sm font-semibold text-white drop-shadow">
+                  {p.label}
+                </p>
+              </div>
+              {isSelected ? (
+                <div className="absolute top-2 right-2 h-6 w-6 rounded-full bg-brand-500 text-white text-xs flex items-center justify-center shadow">
+                  ✓
+                </div>
+              ) : null}
+            </button>
+          );
+        })}
+      </div>
+    </section>
   );
 }
