@@ -11,25 +11,33 @@
           "id": "gno-1",
           "label": "Sequin Dress",
           "prompt": "An elegant silver sequin mini dress with thin straps, sparkling under warm golden club lighting, smooth fabric draping, professional fashion photography, sharp focus, 8k detail",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "sample_prompt": "An elegant silver sequin mini dress with thin straps, sparkling light-catching fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/girls-night-out/gno-1.jpg"
         },
         {
           "id": "gno-2",
           "label": "Little Black Dress",
           "prompt": "A form-fitting little black cocktail dress, classic silhouette, satin finish, lit by moody rooftop bar lighting with bokeh city lights, editorial fashion photography",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "sample_prompt": "A form-fitting little black cocktail dress with a classic silhouette, smooth satin finish, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/girls-night-out/gno-2.jpg"
         },
         {
           "id": "gno-3",
           "label": "Rooftop Bar",
           "prompt": "A luxurious rooftop bar at sunset, city skyline in the background, string lights, blurred people in the distance, golden hour, cinematic shallow depth of field",
-          "negative_prompt": "blurry foreground, distorted architecture, low quality, cartoon, painting, text, watermark"
+          "sample_prompt": "A minimalist rooftop bar scene flat-lay composition: two coupe glasses with golden champagne, a small bouquet of pampas grass, a sprig of rosemary, and string lights arranged aesthetically on a seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end lifestyle lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry foreground, distorted, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/girls-night-out/gno-3.jpg"
         },
         {
           "id": "gno-4",
           "label": "Gold Jewelry",
           "prompt": "Chunky gold statement earrings and layered necklaces, warm reflective metallic highlights, styled on the subject's neckline, high-end fashion jewelry photography",
-          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark"
+          "sample_prompt": "Chunky gold statement earrings and layered gold necklaces arranged as a flat-lay, warm reflective metallic highlights, on a seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end jewelry lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark",
+          "sample": "/samples/girls-night-out/gno-4.jpg"
         }
       ]
     },

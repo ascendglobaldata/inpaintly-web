@@ -106,7 +106,10 @@ async function runPrediction(prompt) {
 for (const p of week.prompts) {
   const outFile = path.join(outDir, `${p.id}.jpg`);
   console.log(`  → ${p.id} (${p.label})`);
-  const output = await runPrediction(p.prompt);
+  // Prefer a catalog-styled sample_prompt when present; fall back to the
+  // inpainting prompt otherwise.
+  const promptText = p.sample_prompt ?? p.prompt;
+  const output = await runPrediction(promptText);
   const url = Array.isArray(output) ? output[0] : output;
   if (!url || typeof url !== "string") {
     throw new Error(`Unexpected output shape for ${p.id}: ${JSON.stringify(output)}`);
