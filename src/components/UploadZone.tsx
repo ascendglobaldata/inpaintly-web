@@ -69,11 +69,11 @@ export function UploadZone({ onImageReady }: Props) {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto px-6 py-10">
-      <div className="border-2 border-dashed border-slate-300 rounded-2xl p-8 text-center bg-slate-50">
-        <div className="text-5xl mb-3">📸</div>
-        <h2 className="text-xl font-bold mb-1">Add a photo</h2>
-        <p className="text-sm text-slate-600 mb-6">
+    <div className="w-full max-w-md mx-auto px-6 py-6">
+      <div className="border-2 border-dashed border-slate-300 rounded-2xl p-6 text-center bg-slate-50">
+        <div className="text-4xl mb-2">📸</div>
+        <h2 className="text-lg font-bold mb-0.5">Add a photo</h2>
+        <p className="text-xs text-slate-600 mb-4">
           JPG, PNG or HEIC · up to 15 MB
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

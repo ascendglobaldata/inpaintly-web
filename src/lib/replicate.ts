@@ -19,8 +19,9 @@ export async function runInpaint(input: {
       mask: input.maskUrl,
       prompt: input.prompt,
       steps: 50,
-      guidance: 60,
-      output_format: "jpg",
+      guidance: 40,
+      output_format: "png",
+      prompt_upsampling: true,
       safety_tolerance: 6,
     },
   })) as unknown;

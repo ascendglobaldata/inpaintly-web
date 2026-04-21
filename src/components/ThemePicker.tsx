@@ -77,17 +77,17 @@ export function ThemePicker({ onPick, onBack, credits, freeLeft }: Props) {
         </div>
       </header>
 
-      <div className="flex-1 px-4 py-6 space-y-8 max-w-lg mx-auto w-full">
+      <div className="flex-1 px-4 py-4 space-y-5 max-w-lg mx-auto w-full overflow-y-auto">
         {/* Active week highlight */}
         <section>
-          <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center gap-2 mb-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-brand-gradient animate-pulse" />
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
               This week
             </p>
           </div>
-          <h2 className="text-2xl font-extrabold mb-1">{active.display_name}</h2>
-          <p className="text-sm text-slate-600 mb-4">{active.description}</p>
+          <h2 className="text-xl font-extrabold mb-0.5">{active.display_name}</h2>
+          <p className="text-xs text-slate-600 mb-3">{active.description}</p>
           <div className="grid grid-cols-2 gap-3">
             {active.prompts.map((p) => (
               <button

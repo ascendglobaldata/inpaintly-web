@@ -242,7 +242,7 @@ export function MaskCanvas({ imageDataUrl, onComplete, onBack }: Props) {
             ref={imgRef}
             src={imageDataUrl}
             alt="your photo"
-            className="block max-h-[70vh] max-w-full rounded-lg select-none"
+            className="block max-h-full max-w-full rounded-lg select-none"
             draggable={false}
           />
           <canvas

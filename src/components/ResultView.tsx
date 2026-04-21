@@ -45,7 +45,7 @@ export function ResultView({ url, onRegenerate, onStartOver }: Props) {
         <img
           src={url}
           alt="Inpaintly result"
-          className="max-h-[72vh] max-w-full rounded-xl shadow-2xl"
+          className="max-h-full max-w-full rounded-xl shadow-2xl"
         />
       </div>
 
