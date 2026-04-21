@@ -114,23 +114,13 @@ export default function LoginPage() {
 
         <p className="text-center text-xs text-slate-500 mt-6">
           By continuing you agree to our{" "}
-          <a
-            href="https://inpaintly.app/terms.html"
-            className="underline"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href="/terms" className="underline">
             Terms
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a
-            href="https://inpaintly.app/privacy.html"
-            className="underline"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href="/privacy" className="underline">
             Privacy Policy
-          </a>
+          </Link>
           .
         </p>
       </div>

@@ -1,7 +1,14 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 
-const PUBLIC_PATHS = ["/login", "/auth/callback", "/api/webhooks"];
+const PUBLIC_PATHS = [
+  "/login",
+  "/auth/callback",
+  "/api/webhooks",
+  "/terms",
+  "/privacy",
+  "/refund",
+];
 const PUBLIC_EXACT = new Set(["/"]);
 
 export async function middleware(request: NextRequest) {
