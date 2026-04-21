@@ -1,5 +1,4 @@
 {
-  "active_week": "2026-04-20",
   "weeks": [
     {
       "week_of": "2026-04-20",
@@ -130,6 +129,42 @@
           "label": "Boho Accessories",
           "prompt": "A wide-brimmed straw sun hat, delicate gold layered necklaces, a natural rattan beach bag, bohemian beach vacation styling, warm golden light, fashion editorial",
           "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-05-18",
+      "slug": "proximity",
+      "display_name": "Proximity",
+      "description": "Four places where skin and garment meet.",
+      "prompts": [
+        {
+          "id": "px-1",
+          "label": "Waistband",
+          "prompt": "Macro photograph, extreme close-up of a waistband of a soft cotton garment lifting subtly off bare lower stomach, soft skin texture with natural grain, fabric elastic edge casting a thin shadow on skin, hard directional light from upper-left, deep black shadow in negative space, monochrome black and white, shot on 100mm macro f/4, intimate and tactile, photorealistic",
+          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark, face",
+          "sample": "/samples/proximity/px-1.jpg"
+        },
+        {
+          "id": "px-2",
+          "label": "Collar",
+          "prompt": "Macro photograph, extreme close-up of the neckline of a cotton garment resting against a collarbone, delicate shadow in the hollow above the bone, soft skin tone with matte finish, fabric stitch visible along the collar edge, hard directional light from upper-left, pitch-black negative space, monochrome black and white, 100mm macro f/4, photorealistic, no face",
+          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark, face",
+          "sample": "/samples/proximity/px-2.jpg"
+        },
+        {
+          "id": "px-3",
+          "label": "Shoulder",
+          "prompt": "Macro photograph, extreme close-up of a bare shoulder with a strap or shoulder seam of a garment crossing the deltoid, strap edge casting soft thin shadow on skin, natural skin texture with light freckling, hard directional light from upper-left, deep black negative space, monochrome black and white, 100mm macro f/4, photorealistic, no face",
+          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark, face",
+          "sample": "/samples/proximity/px-3.jpg"
+        },
+        {
+          "id": "px-4",
+          "label": "Cuff",
+          "prompt": "Macro photograph, extreme close-up of a cuff or hem of a garment at the wrist, forearm running diagonally across frame, fabric edge resting soft against skin with fine wrinkles, tendon subtly visible beneath skin, hard directional light from upper-left, deep black negative space, monochrome black and white, 100mm macro f/4, photorealistic",
+          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/proximity/px-4.jpg"
         }
       ]
     }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import themes from "@/lib/themes.json";
+import { getActiveWeek, type ThemeWeek, type ThemePrompt } from "@/lib/activeWeek";
 import { Button } from "./Button";
 
 interface Props {
@@ -12,36 +12,15 @@ interface Props {
   freeLeft: number;
 }
 
-interface Prompt {
-  id: string;
-  label: string;
-  prompt: string;
-  negative_prompt: string;
-  sample?: string;
-}
-interface Week {
-  week_of: string;
-  slug: string;
-  display_name: string;
-  description: string;
-  cover?: string;
-  prompts: Prompt[];
-}
-
 /**
  * Streamlined theme picker — the weekly drop IS the value prop.
  * Shows only the active week's 4 prompts in large tiles. Other weeks
  * and custom prompt are secondary actions (custom prompt routes to a
- * dedicated screen).
+ * dedicated screen). The active week auto-rolls at Monday 08:00 PT.
  */
 export function ThemePicker({ onPick, onUseCustom, onBack, credits, freeLeft }: Props) {
-  const active = useMemo(() => {
-    const w = (themes as any).active_week as string;
-    return ((themes as any).weeks as Week[]).find((x) => x.week_of === w) ??
-      ((themes as any).weeks as Week[])[0];
-  }, []);
-
-  const [selected, setSelected] = useState<Prompt | null>(null);
+  const active: ThemeWeek = useMemo(() => getActiveWeek(), []);
+  const [selected, setSelected] = useState<ThemePrompt | null>(null);
 
   const hasCredits = credits > 0 || freeLeft > 0;
 
