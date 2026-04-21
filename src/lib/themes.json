@@ -9,28 +9,28 @@
         {
           "id": "fno-1",
           "label": "Classic Midi",
-          "prompt": "A classic black cocktail midi dress, clean silhouette, matte crepe fabric, subtle knee-length hem, lit by warm evening cocktail bar light with soft bokeh, editorial fashion photography, sharp focus",
+          "prompt": "A classic black cocktail midi dress, clean tailored silhouette, matte crepe fabric falling just below the knee, bateau neckline, sleeveless, sophisticated natural fabric drape, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric texture, clean minimalist aesthetic",
           "sample_prompt": "A classic black cocktail midi dress with clean silhouette and matte crepe fabric at knee length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
           "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
           "id": "fno-2",
           "label": "LBD Cocktail",
-          "prompt": "A form-fitting little black cocktail dress, classic hourglass silhouette, satin finish, thin straps, lit by moody rooftop bar lighting with bokeh city lights, editorial fashion photography, sharp focus",
+          "prompt": "A form-fitting little black cocktail dress, classic hourglass silhouette, smooth satin finish with subtle sheen, thin spaghetti straps, V-neckline, above-the-knee hem, clean feminine tailoring, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric sheen, clean minimalist aesthetic",
           "sample_prompt": "A form-fitting little black cocktail dress with classic hourglass silhouette and smooth satin finish, thin straps, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
           "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
           "id": "fno-3",
           "label": "Sequin Mini",
-          "prompt": "An elegant silver sequin mini dress with thin straps, sparkling under warm golden club lighting, smooth fabric draping, professional fashion photography, sharp focus",
+          "prompt": "A silver sequin mini dress, densely packed all-over sequins catching light across every inch of fabric, thin spaghetti straps, V-neckline, fitted bodice, mini length just above the knee, smooth liquid drape, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail sequin texture, clean minimalist aesthetic",
           "sample_prompt": "An elegant silver sequin mini dress with thin straps, sparkling light-catching fabric, smooth draping, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
           "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
           "id": "fno-4",
           "label": "Cutout Bodycon",
-          "prompt": "A bold black bodycon mini dress with strategic geometric cutouts at the waist, form-fitting stretch fabric, lit by neon club accent lighting, editorial fashion photography, sharp focus",
+          "prompt": "A black bodycon mini dress with strategic geometric cutouts at the waist exposing narrow slivers of skin, form-fitting stretch crepe fabric, long sleeves, high neckline, precise clean cutout edges, mini length, sculpted silhouette, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric, clean minimalist aesthetic",
           "sample_prompt": "A bold black bodycon mini dress with strategic geometric waist cutouts, form-fitting stretch fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
           "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         }
