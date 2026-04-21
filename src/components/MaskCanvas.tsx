@@ -221,28 +221,28 @@ export function MaskCanvas({ imageDataUrl, onComplete, onBack }: Props) {
   }
 
   return (
-    <div className="min-h-dvh flex flex-col bg-slate-900 text-white">
-      <header className="flex items-center justify-between p-4 border-b border-white/10">
+    <div className="h-dvh flex flex-col bg-slate-900 text-white overflow-hidden">
+      <header className="flex items-center justify-between p-3 border-b border-white/10">
         <button
           onClick={onBack}
           className="text-sm text-slate-300 hover:text-white"
         >
           ← Back
         </button>
-        <h1 className="font-semibold">Paint the area to change</h1>
-        <div className="w-14" />
+        <h1 className="font-semibold text-sm">Paint the area to change</h1>
+        <div className="w-12" />
       </header>
 
       <div
         ref={wrapRef}
-        className="flex-1 flex items-center justify-center p-4 overflow-hidden"
+        className="flex-1 min-h-0 flex items-center justify-center p-2 overflow-hidden"
       >
-        <div className="relative inline-block max-h-full">
+        <div className="relative inline-block">
           <img
             ref={imgRef}
             src={imageDataUrl}
             alt="your photo"
-            className="block max-h-full max-w-full rounded-lg select-none"
+            className="block max-h-[calc(100dvh-200px)] max-w-full rounded-lg select-none"
             draggable={false}
           />
           <canvas

@@ -6,6 +6,7 @@ import { Button } from "./Button";
 
 interface Props {
   onPick: (prompt: string, negative: string, meta: { theme: string; label: string }) => void;
+  onUseCustom: () => void;
   onBack: () => void;
   credits: number;
   freeLeft: number;
@@ -16,6 +17,7 @@ interface Prompt {
   label: string;
   prompt: string;
   negative_prompt: string;
+  sample?: string;
 }
 interface Week {
   week_of: string;
@@ -26,48 +28,38 @@ interface Week {
   prompts: Prompt[];
 }
 
-export function ThemePicker({ onPick, onBack, credits, freeLeft }: Props) {
+/**
+ * Streamlined theme picker — the weekly drop IS the value prop.
+ * Shows only the active week's 4 prompts in large tiles. Other weeks
+ * and custom prompt are secondary actions (custom prompt routes to a
+ * dedicated screen).
+ */
+export function ThemePicker({ onPick, onUseCustom, onBack, credits, freeLeft }: Props) {
   const active = useMemo(() => {
     const w = (themes as any).active_week as string;
     return ((themes as any).weeks as Week[]).find((x) => x.week_of === w) ??
       ((themes as any).weeks as Week[])[0];
   }, []);
-  const all = ((themes as any).weeks as Week[]).filter(
-    (w) => w.slug !== active.slug,
-  );
 
   const [selected, setSelected] = useState<Prompt | null>(null);
-  const [custom, setCustom] = useState("");
-  const [week, setWeek] = useState<Week>(active);
 
   const hasCredits = credits > 0 || freeLeft > 0;
 
   function go() {
-    if (custom.trim().length > 3) {
-      onPick(
-        custom.trim(),
-        "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
-        { theme: "custom", label: "Custom prompt" },
-      );
-      return;
-    }
-    if (selected) {
-      onPick(selected.prompt, selected.negative_prompt, {
-        theme: week.slug,
-        label: selected.label,
-      });
-    }
+    if (!selected) return;
+    onPick(selected.prompt, selected.negative_prompt, {
+      theme: active.slug,
+      label: selected.label,
+    });
   }
 
-  const canGo = !!selected || custom.trim().length > 3;
-
   return (
-    <main className="min-h-dvh bg-white flex flex-col">
-      <header className="flex items-center justify-between p-4 border-b border-slate-200">
+    <main className="h-dvh bg-white flex flex-col overflow-hidden">
+      <header className="flex items-center justify-between p-3 border-b border-slate-200">
         <button onClick={onBack} className="text-sm text-slate-600">
           ← Back
         </button>
-        <h1 className="font-semibold">Pick a vibe</h1>
+        <h1 className="font-semibold text-sm">Pick a vibe</h1>
         <div className="text-xs font-medium text-slate-500 whitespace-nowrap">
           {credits > 0
             ? `${credits} credits`
@@ -77,110 +69,69 @@ export function ThemePicker({ onPick, onBack, credits, freeLeft }: Props) {
         </div>
       </header>
 
-      <div className="flex-1 px-4 py-4 space-y-5 max-w-lg mx-auto w-full overflow-y-auto">
-        {/* Active week highlight */}
-        <section>
-          <div className="flex items-center gap-2 mb-2">
+      <div className="flex-1 min-h-0 overflow-y-auto">
+        <div className="px-4 pt-4 pb-2 max-w-lg mx-auto w-full">
+          <div className="flex items-center gap-2 mb-1">
             <span className="inline-flex h-2 w-2 rounded-full bg-brand-gradient animate-pulse" />
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-              This week
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
+              This week's drop
             </p>
           </div>
-          <h2 className="text-xl font-extrabold mb-0.5">{active.display_name}</h2>
-          <p className="text-xs text-slate-600 mb-3">{active.description}</p>
-          <div className="grid grid-cols-2 gap-3">
-            {active.prompts.map((p) => (
-              <button
-                key={p.id}
-                onClick={() => {
-                  setWeek(active);
-                  setSelected(p);
-                  setCustom("");
-                }}
-                className={`text-left p-4 rounded-2xl border transition ${
-                  selected?.id === p.id
-                    ? "border-brand-500 bg-brand-50 ring-2 ring-brand-500/30"
-                    : "border-slate-200 hover:border-slate-300"
-                }`}
-              >
-                <p className="font-semibold text-sm">{p.label}</p>
-              </button>
-            ))}
-          </div>
-        </section>
+          <h2 className="text-xl font-extrabold leading-tight">
+            {active.display_name}
+          </h2>
+          <p className="text-xs text-slate-600 mt-1">{active.description}</p>
+        </div>
 
-        {/* Other weeks */}
-        <section>
-          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
-            More themes
-          </p>
-          <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 snap-x">
-            {all.map((w) => (
-              <button
-                key={w.slug}
-                onClick={() => {
-                  setWeek(w);
-                  setSelected(w.prompts[0]);
-                  setCustom("");
-                }}
-                className={`snap-start shrink-0 w-48 text-left p-4 rounded-2xl border ${
-                  week.slug === w.slug
-                    ? "border-brand-500 bg-brand-50"
-                    : "border-slate-200"
-                }`}
-              >
-                <p className="font-bold text-sm">{w.display_name}</p>
-                <p className="text-xs text-slate-600 mt-1">
-                  {w.description}
-                </p>
-              </button>
-            ))}
-          </div>
-          {week.slug !== active.slug ? (
-            <div className="grid grid-cols-2 gap-3 mt-4">
-              {week.prompts.map((p) => (
+        <div className="px-4 pb-4 max-w-lg mx-auto w-full">
+          <div className="grid grid-cols-2 gap-3">
+            {active.prompts.slice(0, 4).map((p) => {
+              const isSelected = selected?.id === p.id;
+              return (
                 <button
                   key={p.id}
-                  onClick={() => {
-                    setSelected(p);
-                    setCustom("");
-                  }}
-                  className={`text-left p-4 rounded-2xl border transition ${
-                    selected?.id === p.id
-                      ? "border-brand-500 bg-brand-50 ring-2 ring-brand-500/30"
+                  onClick={() => setSelected(p)}
+                  className={`relative aspect-[3/4] rounded-2xl border-2 overflow-hidden text-left transition ${
+                    isSelected
+                      ? "border-brand-500 ring-2 ring-brand-500/40 shadow-lg"
                       : "border-slate-200 hover:border-slate-300"
                   }`}
                 >
-                  <p className="font-semibold text-sm">{p.label}</p>
+                  {p.sample ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={p.sample}
+                      alt={p.label}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200" />
+                  )}
+                  <div className="absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-black/70 to-transparent">
+                    <p className="text-sm font-semibold text-white drop-shadow">
+                      {p.label}
+                    </p>
+                  </div>
+                  {isSelected ? (
+                    <div className="absolute top-2 right-2 h-6 w-6 rounded-full bg-brand-500 text-white text-xs flex items-center justify-center shadow">
+                      ✓
+                    </div>
+                  ) : null}
                 </button>
-              ))}
-            </div>
-          ) : null}
-        </section>
+              );
+            })}
+          </div>
 
-        {/* Custom prompt */}
-        <section>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
-            Or describe your own
-          </label>
-          <textarea
-            value={custom}
-            onChange={(e) => {
-              setCustom(e.target.value);
-              setSelected(null);
-            }}
-            placeholder="e.g. a red silk dress at sunset"
-            rows={3}
-            maxLength={300}
-            className="w-full rounded-xl border border-slate-200 px-4 py-3 text-base outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
-          />
-          <p className="text-xs text-slate-400 mt-1">
-            {custom.length}/300
-          </p>
-        </section>
+          <button
+            onClick={onUseCustom}
+            className="mt-4 w-full text-sm font-medium text-slate-600 hover:text-slate-900 py-2 underline underline-offset-4"
+          >
+            Or use a custom prompt →
+          </button>
+        </div>
       </div>
 
-      <footer className="sticky bottom-0 bg-white border-t border-slate-200 p-4 pb-[env(safe-area-inset-bottom)]">
+      <footer className="border-t border-slate-200 p-3 pb-[calc(env(safe-area-inset-bottom)+12px)] bg-white">
         {!hasCredits ? (
           <Button
             variant="primary"
@@ -193,7 +144,7 @@ export function ThemePicker({ onPick, onBack, credits, freeLeft }: Props) {
           <Button
             variant="primary"
             className="w-full"
-            disabled={!canGo}
+            disabled={!selected}
             onClick={go}
           >
             Generate →

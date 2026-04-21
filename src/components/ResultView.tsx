@@ -29,23 +29,23 @@ export function ResultView({ url, onRegenerate, onStartOver }: Props) {
   }
 
   return (
-    <main className="min-h-dvh bg-slate-900 text-white flex flex-col">
-      <header className="flex items-center justify-between p-4 border-b border-white/10">
+    <main className="h-dvh bg-slate-900 text-white flex flex-col overflow-hidden">
+      <header className="flex items-center justify-between p-3 border-b border-white/10">
         <button
           onClick={onStartOver}
           className="text-sm text-slate-300 hover:text-white"
         >
           ✕ New
         </button>
-        <h1 className="font-semibold">Your result</h1>
+        <h1 className="font-semibold text-sm">Your result</h1>
         <div className="w-10" />
       </header>
 
-      <div className="flex-1 flex items-center justify-center p-4">
+      <div className="flex-1 min-h-0 flex items-center justify-center p-2 overflow-hidden">
         <img
           src={url}
           alt="Inpaintly result"
-          className="max-h-full max-w-full rounded-xl shadow-2xl"
+          className="block max-h-[calc(100dvh-180px)] max-w-full rounded-xl shadow-2xl"
         />
       </div>
 

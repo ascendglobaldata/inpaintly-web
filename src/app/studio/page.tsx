@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { UploadZone } from "@/components/UploadZone";
 import { MaskCanvas } from "@/components/MaskCanvas";
 import { ThemePicker } from "@/components/ThemePicker";
+import { CustomPrompt } from "@/components/CustomPrompt";
 import { ResultView } from "@/components/ResultView";
 import { Button } from "@/components/Button";
 import { createClient } from "@/lib/supabase/client";
 
-type Step = "upload" | "mask" | "theme" | "generating" | "result";
+type Step = "upload" | "mask" | "theme" | "custom" | "generating" | "result";
 
 export default function StudioPage() {
   const supabase = createClient();
@@ -91,7 +92,7 @@ export default function StudioPage() {
       setStep("result");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong");
-      setStep("theme");
+      setStep(meta.theme === "custom" ? "custom" : "theme");
     }
   }
 
@@ -163,6 +164,25 @@ export default function StudioPage() {
           freeLeft={freeLeft}
           onBack={() => setStep("mask")}
           onPick={generate}
+          onUseCustom={() => setStep("custom")}
+        />
+      </>
+    );
+  }
+
+  if (step === "custom") {
+    return (
+      <>
+        {error ? (
+          <div className="bg-red-50 text-red-800 text-sm p-3 text-center">
+            {error}
+          </div>
+        ) : null}
+        <CustomPrompt
+          credits={credits}
+          freeLeft={freeLeft}
+          onBack={() => setStep("theme")}
+          onGenerate={generate}
         />
       </>
     );
