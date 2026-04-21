@@ -21,7 +21,7 @@ export async function runInpaint(input: {
       steps: 50,
       guidance: 60,
       output_format: "jpg",
-      safety_tolerance: 2,
+      safety_tolerance: 6,
     },
   })) as unknown;
 
