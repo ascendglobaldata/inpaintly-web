@@ -67,7 +67,10 @@ export async function POST(request: Request) {
     upsert: true,
   });
   if (upI.error || upM.error) {
-    if (paidOrFree === "paid") await admin.rpc("refund_credit", { user_id: user.id });
+    await admin.rpc(
+      paidOrFree === "paid" ? "refund_credit" : "restore_free_gen",
+      { user_id: user.id },
+    );
     return NextResponse.json(
       { error: "upload_failed", detail: upI.error?.message ?? upM.error?.message },
       { status: 500 },
@@ -80,7 +83,10 @@ export async function POST(request: Request) {
     .createSignedUrl(inputPath, 600);
   const mkUrl = await admin.storage.from("masks").createSignedUrl(maskPath, 600);
   if (!inUrl.data || !mkUrl.data) {
-    if (paidOrFree === "paid") await admin.rpc("refund_credit", { user_id: user.id });
+    await admin.rpc(
+      paidOrFree === "paid" ? "refund_credit" : "restore_free_gen",
+      { user_id: user.id },
+    );
     return NextResponse.json({ error: "signed_url_failed" }, { status: 500 });
   }
 
@@ -99,7 +105,10 @@ export async function POST(request: Request) {
     .select("id")
     .single();
   if (insErr || !genRow) {
-    if (paidOrFree === "paid") await admin.rpc("refund_credit", { user_id: user.id });
+    await admin.rpc(
+      paidOrFree === "paid" ? "refund_credit" : "restore_free_gen",
+      { user_id: user.id },
+    );
     return NextResponse.json({ error: "db_insert_failed" }, { status: 500 });
   }
 
@@ -141,7 +150,10 @@ export async function POST(request: Request) {
       .from("generations")
       .update({ status: "failed", error_message: msg })
       .eq("id", genRow.id);
-    if (paidOrFree === "paid") await admin.rpc("refund_credit", { user_id: user.id });
+    await admin.rpc(
+      paidOrFree === "paid" ? "refund_credit" : "restore_free_gen",
+      { user_id: user.id },
+    );
     return NextResponse.json({ error: "generation_failed", detail: msg }, { status: 500 });
   }
 }

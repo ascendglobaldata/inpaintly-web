@@ -87,6 +87,18 @@ export default function AccountPage() {
     window.location.href = "/";
   }
 
+  async function deleteGen(id: string) {
+    if (!confirm("Delete this generation? This can't be undone.")) return;
+    const prev = gens;
+    // Optimistic remove
+    setGens((g) => g.filter((x) => x.id !== id));
+    const r = await fetch(`/api/generations/${id}`, { method: "DELETE" });
+    if (!r.ok) {
+      alert("Couldn't delete — please try again.");
+      setGens(prev);
+    }
+  }
+
   function publicOutputUrl(path: string | null): string | null {
     if (!path) return null;
     const base = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -169,7 +181,7 @@ export default function AccountPage() {
               return (
                 <div
                   key={g.id}
-                  className="aspect-square rounded-lg overflow-hidden bg-slate-100 relative"
+                  className="aspect-square rounded-lg overflow-hidden bg-slate-100 relative group"
                   title={`${g.theme_slug ?? ""} — ${g.status}`}
                 >
                   {url ? (
@@ -184,6 +196,13 @@ export default function AccountPage() {
                       {g.status}
                     </div>
                   )}
+                  <button
+                    onClick={() => deleteGen(g.id)}
+                    aria-label="Delete generation"
+                    className="absolute top-1 right-1 h-7 w-7 rounded-full bg-black/60 text-white text-xs flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition"
+                  >
+                    🗑
+                  </button>
                 </div>
               );
             })}
