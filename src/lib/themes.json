@@ -1,0 +1,137 @@
+{
+  "active_week": "2026-04-20",
+  "weeks": [
+    {
+      "week_of": "2026-04-20",
+      "slug": "girls-night-out",
+      "display_name": "Girls Night Out",
+      "description": "Rooftop vibes, sequins, neon, main character energy",
+      "cover": "/themes/girls-night-out.jpg",
+      "prompts": [
+        {
+          "id": "gno-1",
+          "label": "Sequin Dress",
+          "prompt": "An elegant silver sequin mini dress with thin straps, sparkling under warm golden club lighting, smooth fabric draping, professional fashion photography, sharp focus, 8k detail",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "gno-2",
+          "label": "Little Black Dress",
+          "prompt": "A form-fitting little black cocktail dress, classic silhouette, satin finish, lit by moody rooftop bar lighting with bokeh city lights, editorial fashion photography",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "gno-3",
+          "label": "Rooftop Bar",
+          "prompt": "A luxurious rooftop bar at sunset, city skyline in the background, string lights, blurred people in the distance, golden hour, cinematic shallow depth of field",
+          "negative_prompt": "blurry foreground, distorted architecture, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "gno-4",
+          "label": "Gold Jewelry",
+          "prompt": "Chunky gold statement earrings and layered necklaces, warm reflective metallic highlights, styled on the subject's neckline, high-end fashion jewelry photography",
+          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-04-27",
+      "slug": "bollywood-glam",
+      "display_name": "Bollywood Glam",
+      "description": "Ornate, regal, unforgettable",
+      "cover": "/themes/bollywood-glam.jpg",
+      "prompts": [
+        {
+          "id": "bwg-1",
+          "label": "Red Lehenga",
+          "prompt": "A vibrant red and gold embroidered lehenga choli, intricate zari work, sheer dupatta draped elegantly, traditional Indian wedding outfit, ornate detailing, professional photography",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, text, watermark"
+        },
+        {
+          "id": "bwg-2",
+          "label": "Regal Sherwani",
+          "prompt": "A cream-and-gold embroidered sherwani with matching safa turban, ornate buttons, intricate threadwork, groom portrait, rich textures, soft window light",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, text, watermark"
+        },
+        {
+          "id": "bwg-3",
+          "label": "Palace Courtyard",
+          "prompt": "An ornate Mughal palace courtyard with marble pillars, red sandstone arches, hanging lanterns, warm evening light, shallow depth of field, cinematic",
+          "negative_prompt": "modern buildings, contemporary, low quality, cartoon, text, watermark"
+        },
+        {
+          "id": "bwg-4",
+          "label": "Bridal Jewelry",
+          "prompt": "A complete bridal jewelry set: maang tikka on the forehead, elaborate gold jhumkas, layered gold necklaces with rubies and emeralds, nath nose ring, ornate, reflective",
+          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-05-04",
+      "slug": "ceo-headshot",
+      "display_name": "CEO Headshot",
+      "description": "LinkedIn-ready, studio quality, confidence",
+      "cover": "/themes/ceo-headshot.jpg",
+      "prompts": [
+        {
+          "id": "ceo-1",
+          "label": "Navy Suit",
+          "prompt": "A tailored navy blue suit with crisp white dress shirt, silk tie in burgundy, clean lapels, professional corporate portrait lighting, sharp focus on fabric texture",
+          "negative_prompt": "wrinkled, casual, low quality, cartoon, distorted, text, watermark"
+        },
+        {
+          "id": "ceo-2",
+          "label": "Executive Blazer",
+          "prompt": "A charcoal grey fitted blazer over a white silk blouse, minimalist professional women's executive outfit, sharp tailoring, studio headshot lighting, confident professional aesthetic",
+          "negative_prompt": "casual, wrinkled, low quality, cartoon, distorted, text, watermark"
+        },
+        {
+          "id": "ceo-3",
+          "label": "Modern Office",
+          "prompt": "A modern glass-walled corporate office with soft bokeh, floor-to-ceiling windows showing city skyline, clean minimalist interior, neutral tones, professional corporate headshot backdrop",
+          "negative_prompt": "cluttered, dated, low quality, cartoon, text, watermark"
+        },
+        {
+          "id": "ceo-4",
+          "label": "Premium Watch",
+          "prompt": "A luxury silver chronograph watch on the wrist, subtle metallic lapel pin, professional executive styling details, sharp focus, high-end product photography quality",
+          "negative_prompt": "plastic, fake, low quality, cartoon, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-05-11",
+      "slug": "beach-sunset",
+      "display_name": "Beach Sunset",
+      "description": "Golden hour escape, salt and sand",
+      "cover": "/themes/beach-sunset.jpg",
+      "prompts": [
+        {
+          "id": "bs-1",
+          "label": "Linen Beach Shirt",
+          "prompt": "A relaxed cream linen button-up shirt, breezy fabric with rolled sleeves, open collar, sun-bleached texture, warm golden hour beach lighting, cinematic depth",
+          "negative_prompt": "formal, stiff, low quality, cartoon, distorted, text, watermark"
+        },
+        {
+          "id": "bs-2",
+          "label": "Flowing Maxi Dress",
+          "prompt": "A flowing white cotton maxi dress with delicate embroidery on the hem, gentle breeze motion, flattering A-line silhouette, barefoot beach vacation aesthetic, golden hour",
+          "negative_prompt": "tight, formal, low quality, cartoon, distorted, text, watermark"
+        },
+        {
+          "id": "bs-3",
+          "label": "Tropical Beach",
+          "prompt": "A pristine tropical beach at sunset, turquoise water, white sand, palm trees, distant sailboats, warm orange-pink sky, cinematic shallow depth of field, travel photography",
+          "negative_prompt": "crowded, urban, low quality, cartoon, text, watermark"
+        },
+        {
+          "id": "bs-4",
+          "label": "Boho Accessories",
+          "prompt": "A wide-brimmed straw sun hat, delicate gold layered necklaces, a natural rattan beach bag, bohemian beach vacation styling, warm golden light, fashion editorial",
+          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark"
+        }
+      ]
+    }
+  ]
+}
