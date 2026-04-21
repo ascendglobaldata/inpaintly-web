@@ -22,6 +22,14 @@ reads). Do **not** edit `themes.json` by hand.
 - **Override for testing.** Set `active_week` in `themes.json` to a specific
   `week_of` date. That week renders regardless of the counter. Remove to
   resume normal rotation.
+- **Previous week slot.** The theme picker shows two sections stacked:
+  current drop on top, previous drop below (both with tagged pills). The
+  "previous" slot defaults to `currentIndex − 1` with wrap-around. When a
+  **new schedule is installed** and we haven't accumulated real history
+  yet, set `previous_week` in `themes.json` to a **later week** (from the
+  same schedule) as a teaser — gives day-one users two weeks of content
+  to browse. Remove the `previous_week` override once the natural
+  minus-one lookback has a real week to point at.
 
 ## Prompt fields
 

@@ -23,6 +23,7 @@ export default function StudioPage() {
     theme: string;
   } | null>(null);
   const [resultUrl, setResultUrl] = useState<string>("");
+  const [resultId, setResultId] = useState<string>("");
   const [error, setError] = useState("");
   const [credits, setCredits] = useState(0);
   const [freeLeft, setFreeLeft] = useState(3);
@@ -74,6 +75,7 @@ export default function StudioPage() {
         throw new Error(j.detail ?? j.error ?? "Something went wrong");
       }
       setResultUrl(j.url);
+      setResultId(j.generation_id ?? "");
       // Refresh credits
       const {
         data: { user },
@@ -102,6 +104,7 @@ export default function StudioPage() {
     setMaskBlob(null);
     setPrompt(null);
     setResultUrl("");
+    setResultId("");
     setStep("upload");
   }
 
@@ -202,6 +205,7 @@ export default function StudioPage() {
     return (
       <ResultView
         url={resultUrl}
+        generationId={resultId}
         onRegenerate={() => setStep("theme")}
         onStartOver={reset}
       />

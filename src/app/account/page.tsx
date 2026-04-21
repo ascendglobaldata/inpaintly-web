@@ -12,6 +12,7 @@ type Generation = {
   theme_slug: string | null;
   prompt: string | null;
   output_url: string | null;
+  saved: boolean;
 };
 
 type Purchase = {
@@ -60,7 +61,7 @@ export default function AccountPage() {
             .single(),
           supabase
             .from("generations")
-            .select("id, created_at, status, theme_slug, prompt, output_url")
+            .select("id, created_at, status, theme_slug, prompt, output_url, saved")
             .eq("user_id", user.id)
             .order("created_at", { ascending: false })
             .limit(20),
@@ -95,6 +96,26 @@ export default function AccountPage() {
     const r = await fetch(`/api/generations/${id}`, { method: "DELETE" });
     if (!r.ok) {
       alert("Couldn't delete — please try again.");
+      setGens(prev);
+    }
+  }
+
+  async function toggleSave(id: string, want: boolean) {
+    const prev = gens;
+    // Optimistic flip
+    setGens((g) => g.map((x) => (x.id === id ? { ...x, saved: want } : x)));
+    const r = await fetch(`/api/generations/${id}/save`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ saved: want }),
+    });
+    if (!r.ok) {
+      const j = await r.json().catch(() => ({}));
+      if (j.error === "cap_reached") {
+        alert("You can save up to 2 outfits. Unsave one first.");
+      } else {
+        alert("Couldn't update. Try again.");
+      }
       setGens(prev);
     }
   }
@@ -161,6 +182,30 @@ export default function AccountPage() {
           </div>
         </div>
 
+        {!loading && gens.filter((g) => g.saved).length > 0 ? (
+          <>
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-base font-bold text-slate-900">Saved outfits</h2>
+              <span className="text-xs text-slate-500">
+                {gens.filter((g) => g.saved).length} / 2
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-2 mb-6">
+              {gens
+                .filter((g) => g.saved)
+                .map((g) => (
+                  <GenerationTile
+                    key={g.id}
+                    gen={g}
+                    url={publicOutputUrl(g.output_url)}
+                    onDelete={deleteGen}
+                    onToggleSave={toggleSave}
+                  />
+                ))}
+            </div>
+          </>
+        ) : null}
+
         <h2 className="text-base font-bold text-slate-900 mb-2">
           Recent generations
         </h2>
@@ -176,36 +221,16 @@ export default function AccountPage() {
           </div>
         ) : (
           <div className="grid grid-cols-3 gap-2 mb-6">
-            {gens.map((g) => {
-              const url = publicOutputUrl(g.output_url);
-              return (
-                <div
-                  key={g.id}
-                  className="aspect-square rounded-lg overflow-hidden bg-slate-100 relative group"
-                  title={`${g.theme_slug ?? ""} — ${g.status}`}
-                >
-                  {url ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={url}
-                      alt={g.theme_slug ?? "generation"}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="flex items-center justify-center h-full text-[10px] text-slate-500">
-                      {g.status}
-                    </div>
-                  )}
-                  <button
-                    onClick={() => deleteGen(g.id)}
-                    aria-label="Delete generation"
-                    className="absolute top-1 right-1 h-7 w-7 rounded-full bg-black/60 text-white text-xs flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition"
-                  >
-                    🗑
-                  </button>
-                </div>
-              );
-            })}
+            {gens.map((g) => (
+              <GenerationTile
+                key={g.id}
+                gen={g}
+                url={publicOutputUrl(g.output_url)}
+                onDelete={deleteGen}
+                onToggleSave={toggleSave}
+                small
+              />
+            ))}
           </div>
         )}
 
@@ -243,5 +268,59 @@ export default function AccountPage() {
         </p>
       </section>
     </main>
+  );
+}
+
+function GenerationTile({
+  gen,
+  url,
+  onDelete,
+  onToggleSave,
+  small = false,
+}: {
+  gen: Generation;
+  url: string | null;
+  onDelete: (id: string) => void;
+  onToggleSave: (id: string, want: boolean) => void;
+  small?: boolean;
+}) {
+  return (
+    <div
+      className={`${
+        small ? "aspect-square" : "aspect-[3/4]"
+      } rounded-lg overflow-hidden bg-slate-100 relative group`}
+      title={`${gen.theme_slug ?? ""} — ${gen.status}`}
+    >
+      {url ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={url}
+          alt={gen.theme_slug ?? "generation"}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className="flex items-center justify-center h-full text-[10px] text-slate-500">
+          {gen.status}
+        </div>
+      )}
+      <button
+        onClick={() => onToggleSave(gen.id, !gen.saved)}
+        aria-label={gen.saved ? "Unsave" : "Save"}
+        className={`absolute top-1 left-1 h-7 w-7 rounded-full text-xs flex items-center justify-center transition ${
+          gen.saved
+            ? "bg-yellow-400 text-slate-900"
+            : "bg-black/60 text-white hover:bg-black/80"
+        }`}
+      >
+        {gen.saved ? "★" : "☆"}
+      </button>
+      <button
+        onClick={() => onDelete(gen.id)}
+        aria-label="Delete generation"
+        className="absolute top-1 right-1 h-7 w-7 rounded-full bg-black/60 text-white text-xs flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition"
+      >
+        🗑
+      </button>
+    </div>
   );
 }
