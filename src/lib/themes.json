@@ -2,177 +2,577 @@
   "weeks": [
     {
       "week_of": "2026-04-20",
-      "slug": "girls-night-out",
-      "display_name": "Girls Night Out",
-      "description": "Rooftop vibes, sequins, neon, main character energy",
-      "cover": "/themes/girls-night-out.jpg",
+      "slug": "friday-night-out",
+      "display_name": "Friday Night Out",
+      "description": "Cocktail hour energy. Four looks for the night that starts at 9.",
       "prompts": [
         {
-          "id": "gno-1",
-          "label": "Sequin Dress",
-          "prompt": "An elegant silver sequin mini dress with thin straps, sparkling under warm golden club lighting, smooth fabric draping, professional fashion photography, sharp focus, 8k detail",
-          "sample_prompt": "An elegant silver sequin mini dress with thin straps, sparkling light-catching fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
-          "sample": "/samples/girls-night-out/gno-1.jpg"
+          "id": "fno-1",
+          "label": "Classic Midi",
+          "prompt": "A classic black cocktail midi dress, clean silhouette, matte crepe fabric, subtle knee-length hem, lit by warm evening cocktail bar light with soft bokeh, editorial fashion photography, sharp focus",
+          "sample_prompt": "A classic black cocktail midi dress with clean silhouette and matte crepe fabric at knee length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "gno-2",
-          "label": "Little Black Dress",
-          "prompt": "A form-fitting little black cocktail dress, classic silhouette, satin finish, lit by moody rooftop bar lighting with bokeh city lights, editorial fashion photography",
-          "sample_prompt": "A form-fitting little black cocktail dress with a classic silhouette, smooth satin finish, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
-          "sample": "/samples/girls-night-out/gno-2.jpg"
+          "id": "fno-2",
+          "label": "LBD Cocktail",
+          "prompt": "A form-fitting little black cocktail dress, classic hourglass silhouette, satin finish, thin straps, lit by moody rooftop bar lighting with bokeh city lights, editorial fashion photography, sharp focus",
+          "sample_prompt": "A form-fitting little black cocktail dress with classic hourglass silhouette and smooth satin finish, thin straps, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "gno-3",
-          "label": "Rooftop Bar",
-          "prompt": "A luxurious rooftop bar at sunset, city skyline in the background, string lights, blurred people in the distance, golden hour, cinematic shallow depth of field",
-          "sample_prompt": "A minimalist rooftop bar scene flat-lay composition: two coupe glasses with golden champagne, a small bouquet of pampas grass, a sprig of rosemary, and string lights arranged aesthetically on a seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end lifestyle lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry foreground, distorted, low quality, cartoon, painting, text, watermark",
-          "sample": "/samples/girls-night-out/gno-3.jpg"
+          "id": "fno-3",
+          "label": "Sequin Mini",
+          "prompt": "An elegant silver sequin mini dress with thin straps, sparkling under warm golden club lighting, smooth fabric draping, professional fashion photography, sharp focus",
+          "sample_prompt": "An elegant silver sequin mini dress with thin straps, sparkling light-catching fabric, smooth draping, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "gno-4",
-          "label": "Gold Jewelry",
-          "prompt": "Chunky gold statement earrings and layered necklaces, warm reflective metallic highlights, styled on the subject's neckline, high-end fashion jewelry photography",
-          "sample_prompt": "Chunky gold statement earrings and layered gold necklaces arranged as a flat-lay, warm reflective metallic highlights, on a seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end jewelry lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark",
-          "sample": "/samples/girls-night-out/gno-4.jpg"
+          "id": "fno-4",
+          "label": "Cutout Bodycon",
+          "prompt": "A bold black bodycon mini dress with strategic geometric cutouts at the waist, form-fitting stretch fabric, lit by neon club accent lighting, editorial fashion photography, sharp focus",
+          "sample_prompt": "A bold black bodycon mini dress with strategic geometric waist cutouts, form-fitting stretch fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         }
       ]
     },
     {
       "week_of": "2026-04-27",
-      "slug": "bollywood-glam",
-      "display_name": "Bollywood Glam",
-      "description": "Ornate, regal, unforgettable",
-      "cover": "/themes/bollywood-glam.jpg",
+      "slug": "weekend-brunch",
+      "display_name": "Weekend Brunch",
+      "description": "Sun-drenched, easy, main-character-on-a-patio.",
       "prompts": [
         {
-          "id": "bwg-1",
-          "label": "Red Lehenga",
-          "prompt": "A vibrant red and gold embroidered lehenga choli, intricate zari work, sheer dupatta draped elegantly, traditional Indian wedding outfit, ornate detailing, professional photography",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, text, watermark"
+          "id": "wbr-1",
+          "label": "Linen + Chinos",
+          "prompt": "A relaxed cream linen button-up shirt with sleeves rolled, tucked into tan chinos, breezy fabric, soft morning patio light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A relaxed cream linen button-up shirt with rolled sleeves tucked into tan chinos, breezy natural fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "bwg-2",
-          "label": "Regal Sherwani",
-          "prompt": "A cream-and-gold embroidered sherwani with matching safa turban, ornate buttons, intricate threadwork, groom portrait, rich textures, soft window light",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, text, watermark"
+          "id": "wbr-2",
+          "label": "Floral Wrap",
+          "prompt": "A small-print floral wrap dress in soft peach and green, tie waist, flutter sleeves, knee-length, warm natural brunch light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A small-print floral wrap dress in soft peach and green tones with tie waist and flutter sleeves at knee length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "bwg-3",
-          "label": "Palace Courtyard",
-          "prompt": "An ornate Mughal palace courtyard with marble pillars, red sandstone arches, hanging lanterns, warm evening light, shallow depth of field, cinematic",
-          "negative_prompt": "modern buildings, contemporary, low quality, cartoon, text, watermark"
+          "id": "wbr-3",
+          "label": "Off-Shoulder",
+          "prompt": "An off-shoulder white cotton blouse with slight volume, tucked into high-waisted light-wash jeans, warm natural sunlight, editorial fashion photography, sharp focus",
+          "sample_prompt": "An off-shoulder white cotton blouse with slight volume tucked into high-waisted light-wash denim jeans, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "bwg-4",
-          "label": "Bridal Jewelry",
-          "prompt": "A complete bridal jewelry set: maang tikka on the forehead, elaborate gold jhumkas, layered gold necklaces with rubies and emeralds, nath nose ring, ornate, reflective",
-          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark"
+          "id": "wbr-4",
+          "label": "Crop + Mini",
+          "prompt": "A ribbed cropped knit top in sage green, paired with a flowy linen mini skirt in cream, warm brunch patio light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A ribbed cropped knit top in sage green paired with a flowy cream linen mini skirt, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         }
       ]
     },
     {
       "week_of": "2026-05-04",
-      "slug": "ceo-headshot",
-      "display_name": "CEO Headshot",
-      "description": "LinkedIn-ready, studio quality, confidence",
-      "cover": "/themes/ceo-headshot.jpg",
+      "slug": "beach-vacation",
+      "display_name": "Beach Vacation",
+      "description": "Salt, sand, golden hour. Four resort looks.",
       "prompts": [
         {
-          "id": "ceo-1",
-          "label": "Navy Suit",
-          "prompt": "A tailored navy blue suit with crisp white dress shirt, silk tie in burgundy, clean lapels, professional corporate portrait lighting, sharp focus on fabric texture",
-          "negative_prompt": "wrinkled, casual, low quality, cartoon, distorted, text, watermark"
+          "id": "bv-1",
+          "label": "Cotton Maxi",
+          "prompt": "A flowing white cotton maxi dress with delicate embroidery on the hem, gentle breeze, A-line silhouette, warm golden hour beach light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A flowing white cotton maxi dress with delicate embroidery on the hem and A-line silhouette, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "ceo-2",
-          "label": "Executive Blazer",
-          "prompt": "A charcoal grey fitted blazer over a white silk blouse, minimalist professional women's executive outfit, sharp tailoring, studio headshot lighting, confident professional aesthetic",
-          "negative_prompt": "casual, wrinkled, low quality, cartoon, distorted, text, watermark"
+          "id": "bv-2",
+          "label": "Sundress",
+          "prompt": "A tiered pale yellow sundress with thin straps, breezy cotton fabric, knee-length, warm tropical beach light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A tiered pale yellow sundress with thin straps and breezy cotton fabric at knee length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "ceo-3",
-          "label": "Modern Office",
-          "prompt": "A modern glass-walled corporate office with soft bokeh, floor-to-ceiling windows showing city skyline, clean minimalist interior, neutral tones, professional corporate headshot backdrop",
-          "negative_prompt": "cluttered, dated, low quality, cartoon, text, watermark"
+          "id": "bv-3",
+          "label": "One-Piece",
+          "prompt": "A sleek black one-piece swimsuit with scoop neckline and high-cut legs, matte stretch fabric, warm tropical beach light, editorial resort photography, sharp focus",
+          "sample_prompt": "A sleek black one-piece swimsuit with scoop neckline and high-cut legs, matte stretch fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end swim lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "ceo-4",
-          "label": "Premium Watch",
-          "prompt": "A luxury silver chronograph watch on the wrist, subtle metallic lapel pin, professional executive styling details, sharp focus, high-end product photography quality",
-          "negative_prompt": "plastic, fake, low quality, cartoon, text, watermark"
+          "id": "bv-4",
+          "label": "Bikini",
+          "prompt": "A tropical print triangle bikini set in coral and palm-green, thin ties, classic cut, warm golden hour beach light, editorial resort photography, sharp focus",
+          "sample_prompt": "A tropical print triangle bikini set in coral and palm-green with thin ties and classic cut, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end swim lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         }
       ]
     },
     {
       "week_of": "2026-05-11",
-      "slug": "beach-sunset",
-      "display_name": "Beach Sunset",
-      "description": "Golden hour escape, salt and sand",
-      "cover": "/themes/beach-sunset.jpg",
+      "slug": "job-interview",
+      "display_name": "Job Interview",
+      "description": "Hiring-manager-says-yes. Four polished looks.",
       "prompts": [
         {
-          "id": "bs-1",
-          "label": "Linen Beach Shirt",
-          "prompt": "A relaxed cream linen button-up shirt, breezy fabric with rolled sleeves, open collar, sun-bleached texture, warm golden hour beach lighting, cinematic depth",
-          "negative_prompt": "formal, stiff, low quality, cartoon, distorted, text, watermark"
+          "id": "ji-1",
+          "label": "Charcoal Suit",
+          "prompt": "A tailored charcoal grey two-piece suit with white dress shirt, clean lapels, sharp tailoring, corporate boardroom lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A tailored charcoal grey two-piece suit with crisp white dress shirt and clean lapels, sharp tailoring, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end menswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "bs-2",
-          "label": "Flowing Maxi Dress",
-          "prompt": "A flowing white cotton maxi dress with delicate embroidery on the hem, gentle breeze motion, flattering A-line silhouette, barefoot beach vacation aesthetic, golden hour",
-          "negative_prompt": "tight, formal, low quality, cartoon, distorted, text, watermark"
+          "id": "ji-2",
+          "label": "Navy Suit + Tie",
+          "prompt": "A tailored navy blue two-piece suit with white dress shirt and burgundy silk tie, crisp tailoring, corporate boardroom lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A tailored navy blue two-piece suit with crisp white dress shirt and burgundy silk tie, sharp tailoring, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end menswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "bs-3",
-          "label": "Tropical Beach",
-          "prompt": "A pristine tropical beach at sunset, turquoise water, white sand, palm trees, distant sailboats, warm orange-pink sky, cinematic shallow depth of field, travel photography",
-          "negative_prompt": "crowded, urban, low quality, cartoon, text, watermark"
+          "id": "ji-3",
+          "label": "Burgundy Sheath",
+          "prompt": "A burgundy sheath dress with fitted silhouette and knee-length hem, clean neckline, smooth crepe fabric, corporate boardroom lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A burgundy sheath dress with fitted silhouette, clean neckline, knee-length hem in smooth crepe fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end womenswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "bs-4",
-          "label": "Boho Accessories",
-          "prompt": "A wide-brimmed straw sun hat, delicate gold layered necklaces, a natural rattan beach bag, bohemian beach vacation styling, warm golden light, fashion editorial",
-          "negative_prompt": "plastic, fake, dull, low quality, distorted, text, watermark"
+          "id": "ji-4",
+          "label": "Navy Wrap",
+          "prompt": "A navy blue wrap dress with structured tie belt, three-quarter sleeves, knee-length hem, smooth crepe fabric, corporate boardroom lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A navy blue wrap dress with structured tie belt and three-quarter sleeves at knee length in smooth crepe fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end womenswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         }
       ]
     },
     {
       "week_of": "2026-05-18",
-      "slug": "proximity",
-      "display_name": "Proximity",
-      "description": "Four places where skin and garment meet.",
+      "slug": "romantic-dinner",
+      "display_name": "Romantic Dinner",
+      "description": "Candlelight mood. Four date-night looks.",
       "prompts": [
         {
-          "id": "px-1",
-          "label": "Waistband",
-          "prompt": "Macro photograph, extreme close-up of a waistband of a soft cotton garment lifting subtly off bare lower stomach, soft skin texture with natural grain, fabric elastic edge casting a thin shadow on skin, hard directional light from upper-left, deep black shadow in negative space, monochrome black and white, shot on 100mm macro f/4, intimate and tactile, photorealistic",
-          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark, face",
-          "sample": "/samples/proximity/px-1.jpg"
+          "id": "rd-1",
+          "label": "Navy A-Line",
+          "prompt": "A navy blue A-line cocktail dress with scoop neckline, knee-length, smooth silk fabric, warm candlelit restaurant lighting, editorial fashion photography, sharp focus",
+          "sample_prompt": "A navy blue A-line cocktail dress with scoop neckline at knee length in smooth silk fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "px-2",
-          "label": "Collar",
-          "prompt": "Macro photograph, extreme close-up of the neckline of a cotton garment resting against a collarbone, delicate shadow in the hollow above the bone, soft skin tone with matte finish, fabric stitch visible along the collar edge, hard directional light from upper-left, pitch-black negative space, monochrome black and white, 100mm macro f/4, photorealistic, no face",
-          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark, face",
-          "sample": "/samples/proximity/px-2.jpg"
+          "id": "rd-2",
+          "label": "Red Wrap",
+          "prompt": "A ruby red wrap dress with flutter sleeves and tie waist, knee-length, smooth jersey fabric, warm candlelit restaurant lighting, editorial fashion photography, sharp focus",
+          "sample_prompt": "A ruby red wrap dress with flutter sleeves and tie waist at knee length in smooth jersey fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "px-3",
-          "label": "Shoulder",
-          "prompt": "Macro photograph, extreme close-up of a bare shoulder with a strap or shoulder seam of a garment crossing the deltoid, strap edge casting soft thin shadow on skin, natural skin texture with light freckling, hard directional light from upper-left, deep black negative space, monochrome black and white, 100mm macro f/4, photorealistic, no face",
-          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark, face",
-          "sample": "/samples/proximity/px-3.jpg"
+          "id": "rd-3",
+          "label": "Emerald Slip",
+          "prompt": "An emerald green silk slip dress with delicate spaghetti straps and cowl neckline, bias-cut, liquid fabric drape, warm candlelit restaurant lighting, editorial fashion photography, sharp focus",
+          "sample_prompt": "An emerald green silk slip dress with delicate spaghetti straps, cowl neckline, bias-cut with liquid fabric drape, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         },
         {
-          "id": "px-4",
-          "label": "Cuff",
-          "prompt": "Macro photograph, extreme close-up of a cuff or hem of a garment at the wrist, forearm running diagonally across frame, fabric edge resting soft against skin with fine wrinkles, tendon subtly visible beneath skin, hard directional light from upper-left, deep black negative space, monochrome black and white, 100mm macro f/4, photorealistic",
-          "negative_prompt": "blurry, distorted, low quality, cartoon, painting, text, watermark",
-          "sample": "/samples/proximity/px-4.jpg"
+          "id": "rd-4",
+          "label": "Back Slit Mini",
+          "prompt": "A black crepe mini dress with dramatic back slit, clean front silhouette, smooth fabric, warm candlelit restaurant lighting, editorial fashion photography, sharp focus",
+          "sample_prompt": "A black crepe mini dress with dramatic back slit and clean front silhouette in smooth fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-05-25",
+      "slug": "wedding-guest",
+      "display_name": "Wedding Guest",
+      "description": "Compliment-the-couple-not-outshine-them. Four guest looks.",
+      "prompts": [
+        {
+          "id": "wg-1",
+          "label": "Pastel Midi",
+          "prompt": "A blush pink pastel midi dress with ruched bodice and flowy skirt, delicate straps, soft tulle overlay, warm garden wedding light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A blush pink pastel midi dress with ruched bodice, flowy skirt, delicate straps, and soft tulle overlay, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "wg-2",
+          "label": "Floral Tea",
+          "prompt": "A pastel floral tea-length dress in soft rose and sage print, V-neckline, three-quarter sleeves, feminine silhouette, warm garden wedding light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A pastel floral tea-length dress in soft rose and sage print with V-neckline, three-quarter sleeves, and feminine silhouette, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "wg-3",
+          "label": "Asymmetric Mini",
+          "prompt": "A pale blue asymmetric one-shoulder mini dress with ruching detail, smooth crepe fabric, warm ballroom reception light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A pale blue asymmetric one-shoulder mini dress with ruching detail in smooth crepe fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "wg-4",
+          "label": "Jewel Bodycon",
+          "prompt": "A deep sapphire jewel-tone bodycon midi dress with high neckline and long sleeves, smooth stretch fabric, warm ballroom reception light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A deep sapphire jewel-tone bodycon midi dress with high neckline and long sleeves in smooth stretch fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-06-01",
+      "slug": "music-festival",
+      "display_name": "Music Festival",
+      "description": "Desert sun, second stage. Four festival-ready fits.",
+      "prompts": [
+        {
+          "id": "mf-1",
+          "label": "Band Tee Jeans",
+          "prompt": "A vintage black band t-shirt slightly cropped, paired with distressed denim shorts, sun-bleached feel, warm festival field light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A vintage black band t-shirt slightly cropped paired with distressed denim shorts and a sun-bleached feel, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end streetwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "mf-2",
+          "label": "Crochet Crop",
+          "prompt": "A boho cream crochet cropped top paired with high-waisted flared jeans, hand-knit texture, warm festival sunset light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A boho cream crochet cropped top paired with high-waisted flared jeans, hand-knit texture, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end festival lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "mf-3",
+          "label": "Metal Bralette",
+          "prompt": "A metallic silver chainmail bralette paired with distressed denim shorts, reflective links, warm festival stage light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A metallic silver chainmail bralette paired with distressed denim shorts, reflective links, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end festival lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "mf-4",
+          "label": "Fringe Halter",
+          "prompt": "A tan suede fringe halter top paired with black leather shorts, soft leather texture, moving fringe, warm festival sunset light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A tan suede fringe halter top paired with black leather shorts, soft leather texture and long fringe, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end festival lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-06-08",
+      "slug": "holiday-party",
+      "display_name": "Holiday Party",
+      "description": "End-of-year sparkle. Four festive statement looks.",
+      "prompts": [
+        {
+          "id": "hp-1",
+          "label": "Velvet Midi",
+          "prompt": "A deep emerald velvet midi dress with long sleeves and square neckline, rich pile texture, warm holiday party lighting with bokeh lights, editorial fashion photography, sharp focus",
+          "sample_prompt": "A deep emerald velvet midi dress with long sleeves, square neckline, and rich pile texture, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "hp-2",
+          "label": "Red Sequin",
+          "prompt": "A vibrant red sequin cocktail dress with thin straps, fitted silhouette, sparkling allover sequins, warm holiday party lighting with bokeh lights, editorial fashion photography, sharp focus",
+          "sample_prompt": "A vibrant red sequin cocktail dress with thin straps, fitted silhouette, and sparkling allover sequins, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "hp-3",
+          "label": "Gold Plunge",
+          "prompt": "A gold metallic midi dress with plunging V-neckline and long sleeves, liquid lamé fabric, warm holiday party lighting with bokeh lights, editorial fashion photography, sharp focus",
+          "sample_prompt": "A gold metallic midi dress with plunging V-neckline, long sleeves, and liquid lamé fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "hp-4",
+          "label": "Velvet Slit",
+          "prompt": "A black velvet long-sleeve midi dress with thigh-high side slit, boat neckline, rich pile texture, warm holiday party lighting with bokeh lights, editorial fashion photography, sharp focus",
+          "sample_prompt": "A black velvet long-sleeve midi dress with thigh-high side slit, boat neckline, and rich pile texture, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-06-15",
+      "slug": "ceo-headshot",
+      "display_name": "CEO Headshot",
+      "description": "LinkedIn-ready, studio quality, confidence.",
+      "prompts": [
+        {
+          "id": "ceo-1",
+          "label": "3-Piece Suit",
+          "prompt": "A tailored charcoal three-piece suit with matching vest, crisp white dress shirt, burgundy silk tie, clean lapels, professional studio headshot lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A tailored charcoal three-piece suit with matching vest, crisp white dress shirt, burgundy silk tie, and clean lapels, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end menswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "ceo-2",
+          "label": "Blazer + Shirt",
+          "prompt": "A sharply tailored black blazer over a crisp white dress shirt, open collar, no tie, clean confident silhouette, professional studio headshot lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A sharply tailored black blazer over a crisp white dress shirt with open collar and no tie, clean confident silhouette, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end menswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "ceo-3",
+          "label": "Sheath + Blazer",
+          "prompt": "A black sheath dress with matching fitted blazer over the shoulders, clean tailoring, knee-length hem, professional studio headshot lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A black sheath dress with matching fitted blazer, clean tailoring, knee-length hem, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end womenswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "ceo-4",
+          "label": "Silk + Pencil",
+          "prompt": "A cream silk blouse with bow neckline tucked into a navy pencil skirt, smooth tailored silhouette, knee-length, professional studio headshot lighting, editorial business photography, sharp focus",
+          "sample_prompt": "A cream silk blouse with bow neckline tucked into a navy pencil skirt, smooth tailored silhouette, knee-length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end womenswear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-06-22",
+      "slug": "pool-party",
+      "display_name": "Pool Party",
+      "description": "Afternoon by the water. Four swim-to-cabana looks.",
+      "prompts": [
+        {
+          "id": "pp-1",
+          "label": "1-Piece + Cover",
+          "prompt": "A black one-piece swimsuit paired with a sheer white chiffon kaftan cover-up, breezy fabric, warm poolside light, editorial resort photography, sharp focus",
+          "sample_prompt": "A black one-piece swimsuit paired with a sheer white chiffon kaftan cover-up, breezy fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end swim lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "pp-2",
+          "label": "Halter High-Leg",
+          "prompt": "A white halter-neck high-leg one-piece swimsuit, plunging neckline, sleek matte stretch fabric, warm poolside light, editorial resort photography, sharp focus",
+          "sample_prompt": "A white halter-neck high-leg one-piece swimsuit with plunging neckline in sleek matte stretch fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end swim lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "pp-3",
+          "label": "Bandeau Bikini",
+          "prompt": "A coral bandeau bikini set with hipster bottoms, smooth matte fabric, warm poolside light, editorial resort photography, sharp focus",
+          "sample_prompt": "A coral bandeau bikini set with hipster bottoms in smooth matte fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end swim lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "pp-4",
+          "label": "String Bikini",
+          "prompt": "A classic triangle string bikini set in soft pink, thin ties, smooth stretch fabric, warm poolside light, editorial resort photography, sharp focus",
+          "sample_prompt": "A classic triangle string bikini set in soft pink with thin ties in smooth stretch fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end swim lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-06-29",
+      "slug": "black-tie-gala",
+      "display_name": "Black Tie Gala",
+      "description": "Red carpet, flashbulbs, floor-length. Four gala gowns.",
+      "prompts": [
+        {
+          "id": "btg-1",
+          "label": "Long-Sleeve Gown",
+          "prompt": "A floor-length black long-sleeve evening gown with high neckline and column silhouette, smooth crepe fabric, warm gala ballroom lighting, editorial red carpet photography, sharp focus",
+          "sample_prompt": "A floor-length black long-sleeve evening gown with high neckline and column silhouette in smooth crepe fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end couture lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "btg-2",
+          "label": "Mermaid Gown",
+          "prompt": "A floor-length deep navy mermaid silhouette gown, fitted through the hips flaring at the knee, smooth satin fabric, warm gala ballroom lighting, editorial red carpet photography, sharp focus",
+          "sample_prompt": "A floor-length deep navy mermaid silhouette gown fitted through the hips and flaring at the knee in smooth satin fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end couture lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "btg-3",
+          "label": "Open-Back Gown",
+          "prompt": "A floor-length red carpet gown in ruby red with dramatic open back, halter neckline at the front, smooth silk fabric, warm gala ballroom lighting, editorial red carpet photography, sharp focus",
+          "sample_prompt": "A floor-length ruby red red-carpet gown with dramatic open back and halter neckline in smooth silk fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end couture lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "btg-4",
+          "label": "Plunge + Slit",
+          "prompt": "A floor-length champagne-gold gown with deep plunge neckline and thigh-high side slit, smooth silk charmeuse fabric, warm gala ballroom lighting, editorial red carpet photography, sharp focus",
+          "sample_prompt": "A floor-length champagne-gold gown with deep plunge neckline and thigh-high side slit in smooth silk charmeuse fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end couture lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-07-06",
+      "slug": "nightclub-vip",
+      "display_name": "Nightclub VIP",
+      "description": "Velvet-rope, bottle-service energy. Four edgy club looks.",
+      "prompts": [
+        {
+          "id": "nv-1",
+          "label": "Satin + Pants",
+          "prompt": "A black satin camisole top tucked into high-waisted wide-leg tailored black pants, liquid fabric drape, dark club lighting with neon accents, editorial fashion photography, sharp focus",
+          "sample_prompt": "A black satin camisole top tucked into high-waisted wide-leg tailored black pants with liquid fabric drape, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "nv-2",
+          "label": "Metal Bodycon",
+          "prompt": "A chrome metallic bodycon mini dress with high neckline and long sleeves, liquid reflective finish, dark club lighting with neon accents, editorial fashion photography, sharp focus",
+          "sample_prompt": "A chrome metallic bodycon mini dress with high neckline, long sleeves, and liquid reflective finish, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "nv-3",
+          "label": "Sheer Mini",
+          "prompt": "A sheer black lace long-sleeve mini dress with delicate floral embroidery, fitted silhouette, dark club lighting with neon accents, editorial fashion photography, sharp focus",
+          "sample_prompt": "A sheer black lace long-sleeve mini dress with delicate floral embroidery and fitted silhouette, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "nv-4",
+          "label": "Lace-Up Leather",
+          "prompt": "A black leather lace-up corset top paired with a matching leather mini skirt, sleek matte finish, dark club lighting with neon accents, editorial fashion photography, sharp focus",
+          "sample_prompt": "A black leather lace-up corset top paired with a matching leather mini skirt in sleek matte finish, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-07-13",
+      "slug": "bollywood-glam",
+      "display_name": "Bollywood Glam",
+      "description": "Ornate, regal, unforgettable. Four traditional looks.",
+      "prompts": [
+        {
+          "id": "bg-1",
+          "label": "Salwar Kameez",
+          "prompt": "An ornate embroidered salwar kameez set in sapphire blue with intricate gold zari work, matching dupatta draped over one shoulder, soft window light, editorial Indian fashion photography, sharp focus",
+          "sample_prompt": "An ornate embroidered salwar kameez set in sapphire blue with intricate gold zari work and matching dupatta draped over one shoulder, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end Indian fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "bg-2",
+          "label": "Kurta Churidar",
+          "prompt": "A richly embroidered cream kurta with matching churidar pants, fine threadwork, silk texture, soft window light, editorial Indian fashion photography, sharp focus",
+          "sample_prompt": "A richly embroidered cream kurta with matching churidar pants, fine threadwork and silk texture, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end Indian fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "bg-3",
+          "label": "Lehenga Choli",
+          "prompt": "A vibrant red and gold embroidered lehenga choli with intricate zari work and sheer dupatta draped elegantly, traditional Indian wedding outfit, soft window light, editorial Indian fashion photography, sharp focus",
+          "sample_prompt": "A vibrant red and gold embroidered lehenga choli with intricate zari work and sheer dupatta, traditional Indian bridal outfit, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end Indian fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "bg-4",
+          "label": "Saree Drape",
+          "prompt": "A vibrant silk saree in emerald green with intricate gold border, classic nivi drape over the shoulder, matching blouse, soft window light, editorial Indian fashion photography, sharp focus",
+          "sample_prompt": "A vibrant emerald green silk saree with intricate gold border, classic nivi drape over the shoulder and matching blouse, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end Indian fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-07-20",
+      "slug": "streetwear",
+      "display_name": "Streetwear",
+      "description": "Off-duty model energy. Four city-street fits.",
+      "prompts": [
+        {
+          "id": "sw-1",
+          "label": "Hoodie Joggers",
+          "prompt": "A coordinated oversized grey hoodie with matching tapered joggers, soft cotton fleece, casual streetwear silhouette, overcast city street light, editorial streetwear photography, sharp focus",
+          "sample_prompt": "A coordinated oversized grey hoodie with matching tapered joggers in soft cotton fleece, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end streetwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "sw-2",
+          "label": "Cropped Hoodie",
+          "prompt": "A black cropped hoodie paired with high-waisted grey sweatpants, soft cotton fleece, streetwear silhouette, overcast city street light, editorial streetwear photography, sharp focus",
+          "sample_prompt": "A black cropped hoodie paired with high-waisted grey sweatpants in soft cotton fleece, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end streetwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "sw-3",
+          "label": "Catsuit Jacket",
+          "prompt": "A fitted black catsuit paired with an oversized beige bomber jacket, sleek stretch fabric and nylon shell, overcast city street light, editorial streetwear photography, sharp focus",
+          "sample_prompt": "A fitted black catsuit paired with an oversized beige bomber jacket in sleek stretch fabric and nylon shell, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end streetwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "sw-4",
+          "label": "Bralette Cargos",
+          "prompt": "A black sports bralette paired with low-rise khaki cargo pants, matte technical fabric, streetwear silhouette, overcast city street light, editorial streetwear photography, sharp focus",
+          "sample_prompt": "A black sports bralette paired with low-rise khaki cargo pants in matte technical fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end streetwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-07-27",
+      "slug": "rooftop-party",
+      "display_name": "Rooftop Party",
+      "description": "Skyline views, golden hour, on-brand. Four rooftop looks.",
+      "prompts": [
+        {
+          "id": "rp-1",
+          "label": "Floral Midi",
+          "prompt": "A flowing small-print floral midi dress in blush and ivory with thin straps, gentle breeze motion, warm golden hour rooftop light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A flowing small-print floral midi dress in blush and ivory with thin straps and gentle fabric motion, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "rp-2",
+          "label": "Strappy Mini",
+          "prompt": "A strappy champagne silk mini dress with criss-cross back, bias-cut liquid drape, warm golden hour rooftop light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A strappy champagne silk mini dress with criss-cross back and bias-cut liquid drape, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "rp-3",
+          "label": "Halter + Mini",
+          "prompt": "A halter-neck crop top in cream paired with a matching mini skirt, smooth satin fabric, warm golden hour rooftop light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A halter-neck crop top in cream paired with a matching mini skirt in smooth satin fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "rp-4",
+          "label": "Mesh Bodycon",
+          "prompt": "A sheer black mesh bodycon midi dress over a nude slip, long sleeves, fitted silhouette, warm golden hour rooftop light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A sheer black mesh bodycon midi dress over a nude slip with long sleeves and fitted silhouette, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        }
+      ]
+    },
+    {
+      "week_of": "2026-08-03",
+      "slug": "winter-formal",
+      "display_name": "Winter Formal",
+      "description": "Cold-weather luxe. Four cozy-meets-elevated looks.",
+      "prompts": [
+        {
+          "id": "wf-1",
+          "label": "Cashmere Dress",
+          "prompt": "A soft cream cashmere midi dress with long sleeves and turtleneck, ribbed cuffs, elegant knit drape, warm winter lodge light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A soft cream cashmere midi dress with long sleeves, turtleneck, ribbed cuffs, and elegant knit drape, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end knitwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "wf-2",
+          "label": "Sweater Dress",
+          "prompt": "A fitted charcoal knit sweater dress with crew neckline and long sleeves, knee-length hem, soft merino texture, warm winter lodge light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A fitted charcoal knit sweater dress with crew neckline, long sleeves, knee-length hem, and soft merino texture, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end knitwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "wf-3",
+          "label": "Cable-Knit Mini",
+          "prompt": "An ivory chunky cable-knit mini dress with long sleeves, rich knit texture, warm winter lodge light, editorial fashion photography, sharp focus",
+          "sample_prompt": "An ivory chunky cable-knit mini dress with long sleeves and rich knit texture, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end knitwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+        },
+        {
+          "id": "wf-4",
+          "label": "Bodycon Sweater",
+          "prompt": "A ribbed black knit bodycon sweater dress with long sleeves and scoop neckline, fitted silhouette, midi length, warm winter lodge light, editorial fashion photography, sharp focus",
+          "sample_prompt": "A ribbed black knit bodycon sweater dress with long sleeves, scoop neckline, fitted silhouette at midi length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end knitwear lookbook photography, clean minimalist composition, sharp focus",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
         }
       ]
     }
