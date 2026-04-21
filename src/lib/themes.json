@@ -49,30 +49,34 @@
         {
           "id": "wbr-1",
           "label": "Linen + Chinos",
-          "prompt": "A relaxed cream linen button-up shirt with sleeves rolled, tucked into tan chinos, breezy fabric, soft morning patio light, editorial fashion photography, sharp focus",
-          "sample_prompt": "A relaxed cream linen button-up shirt with rolled sleeves tucked into tan chinos, breezy natural fabric, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "prompt": "A relaxed cream linen button-up shirt with sleeves rolled to the elbow, natural linen weave texture with soft creases, tucked into tan cotton chinos with a clean waistband, casual tailored silhouette, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric texture, clean minimalist aesthetic",
+          "sample_prompt": "Close-up fashion editorial photograph of a bare forearm of a woman, with the rolled sleeve of a cream linen button-up shirt resting at the elbow, natural linen weave and soft fabric folds visible, a sliver of tan chinos waistband visible at the edge of frame, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/weekend-brunch/wbr-1.jpg"
         },
         {
           "id": "wbr-2",
           "label": "Floral Wrap",
-          "prompt": "A small-print floral wrap dress in soft peach and green, tie waist, flutter sleeves, knee-length, warm natural brunch light, editorial fashion photography, sharp focus",
-          "sample_prompt": "A small-print floral wrap dress in soft peach and green tones with tie waist and flutter sleeves at knee length, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "prompt": "A small-print floral wrap dress in soft peach and sage green tones, tie waist with fabric ties draping, flutter sleeves, V-neckline, knee-length hem, smooth viscose fabric, feminine silhouette, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric print, clean minimalist aesthetic",
+          "sample_prompt": "Close-up fashion editorial photograph of a natural waist of a woman, with the tie-waist knot of a small-print floral wrap dress in soft peach and sage green tones, fabric tie ends gracefully draping, a flutter sleeve edge visible at the upper frame, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/weekend-brunch/wbr-2.jpg"
         },
         {
           "id": "wbr-3",
           "label": "Off-Shoulder",
-          "prompt": "An off-shoulder white cotton blouse with slight volume, tucked into high-waisted light-wash jeans, warm natural sunlight, editorial fashion photography, sharp focus",
-          "sample_prompt": "An off-shoulder white cotton blouse with slight volume tucked into high-waisted light-wash denim jeans, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "prompt": "An off-shoulder white cotton blouse with slight volume across the bust, soft gathered neckline resting below the shoulders, breezy cotton texture, tucked into high-waisted light-wash denim jeans with clean stitching, casual tailored silhouette, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric texture, clean minimalist aesthetic",
+          "sample_prompt": "Close-up fashion editorial photograph of a bare shoulder and collarbone of a woman, with the off-shoulder gathered edge of a white cotton blouse resting softly below the shoulder line, natural cotton texture with slight volume, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/weekend-brunch/wbr-3.jpg"
         },
         {
           "id": "wbr-4",
           "label": "Crop + Mini",
-          "prompt": "A ribbed cropped knit top in sage green, paired with a flowy linen mini skirt in cream, warm brunch patio light, editorial fashion photography, sharp focus",
-          "sample_prompt": "A ribbed cropped knit top in sage green paired with a flowy cream linen mini skirt, styled on an invisible mannequin, full-length three-quarter view, seamless pure white background, bright and airy catalog editorial lighting, soft diffused shadows, high-end fashion lookbook photography, clean minimalist composition, sharp focus",
-          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark"
+          "prompt": "A ribbed sage green knit cropped top with short sleeves and crew neckline, paired with a flowy cream linen mini skirt with clean high waistband, fitted knit meeting relaxed linen, casual feminine silhouette, bright and airy catalog editorial fashion photography, crisp sharp focus, high-detail fabric texture, clean minimalist aesthetic",
+          "sample_prompt": "Close-up fashion editorial photograph of a bare midriff of a woman, with the cropped ribbed hem of a sage green knit top at the top of frame and the high waistband of a cream linen mini skirt at the bottom of frame, a narrow sliver of bare skin between, knit rib texture and natural linen weave both visible, smooth natural skin with warm peach undertone, seamless pure white background, bright and airy catalog studio lighting from upper-left with soft diffused shadows, shot on 85mm f/2.8 lens with shallow depth of field, clean minimalist composition, editorial color grading, high-end fashion lookbook aesthetic, photorealistic, sharp focus, no face",
+          "negative_prompt": "blurry, distorted, extra limbs, deformed hands, bad anatomy, low quality, cartoon, painting, text, watermark",
+          "sample": "/samples/weekend-brunch/wbr-4.jpg"
         }
       ]
     },
