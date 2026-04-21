@@ -221,7 +221,7 @@ export function MaskCanvas({ imageDataUrl, onComplete, onBack }: Props) {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-900 text-white">
+    <div className="min-h-dvh flex flex-col bg-slate-900 text-white">
       <header className="flex items-center justify-between p-4 border-b border-white/10">
         <button
           onClick={onBack}

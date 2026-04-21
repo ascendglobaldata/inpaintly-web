@@ -95,7 +95,7 @@ export default function AccountPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-dvh bg-white">
       <header className="flex items-center justify-between p-4 border-b border-slate-200">
         <Link
           href="/studio"

@@ -13,7 +13,7 @@ export default async function Home() {
 
   // Otherwise show a minimal splash with Start button
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-br from-brand-50 to-white">
+    <main className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-brand-50 to-white">
       <div className="text-center max-w-md">
         <h1 className="text-5xl font-extrabold tracking-tight mb-4">
           <span className="bg-brand-gradient bg-clip-text text-transparent">

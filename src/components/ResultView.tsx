@@ -29,7 +29,7 @@ export function ResultView({ url, onRegenerate, onStartOver }: Props) {
   }
 
   return (
-    <main className="min-h-screen bg-slate-900 text-white flex flex-col">
+    <main className="min-h-dvh bg-slate-900 text-white flex flex-col">
       <header className="flex items-center justify-between p-4 border-b border-white/10">
         <button
           onClick={onStartOver}

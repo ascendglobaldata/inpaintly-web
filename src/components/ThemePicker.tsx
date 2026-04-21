@@ -62,7 +62,7 @@ export function ThemePicker({ onPick, onBack, credits, freeLeft }: Props) {
   const canGo = !!selected || custom.trim().length > 3;
 
   return (
-    <main className="min-h-screen bg-white flex flex-col">
+    <main className="min-h-dvh bg-white flex flex-col">
       <header className="flex items-center justify-between p-4 border-b border-slate-200">
         <button onClick={onBack} className="text-sm text-slate-600">
           ← Back

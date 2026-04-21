@@ -46,7 +46,7 @@ export default function BuyPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white flex flex-col">
+    <main className="min-h-dvh bg-white flex flex-col">
       <header className="flex items-center justify-between p-4 border-b border-slate-200">
         <Link
           href="/studio"

@@ -106,7 +106,7 @@ export default function StudioPage() {
 
   if (step === "upload") {
     return (
-      <main className="min-h-screen bg-white flex flex-col">
+      <main className="min-h-dvh bg-white flex flex-col">
         <header className="flex items-center justify-between p-4 border-b border-slate-200">
           <span className="text-xl font-extrabold bg-brand-gradient bg-clip-text text-transparent">
             Inpaintly
@@ -170,7 +170,7 @@ export default function StudioPage() {
 
   if (step === "generating") {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-slate-900 text-white px-6">
+      <main className="min-h-dvh flex flex-col items-center justify-center bg-slate-900 text-white px-6">
         <div className="h-20 w-20 rounded-full border-4 border-white/10 border-t-white animate-spin mb-6" />
         <h2 className="text-xl font-semibold mb-1">Painting your photo…</h2>
         <p className="text-sm text-slate-400">Usually takes 10–30 seconds.</p>
