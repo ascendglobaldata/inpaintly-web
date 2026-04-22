@@ -72,7 +72,7 @@ export default async function Home() {
           href="/login"
           className="block w-full text-center bg-brand-gradient text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 hover:opacity-95 transition"
         >
-          Start — 3 free edits →
+          Start for free →
         </Link>
         <p className="mt-3 text-xs text-slate-500 text-center">
           No credit card. New theme drops every few days.
